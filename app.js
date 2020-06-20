@@ -568,6 +568,350 @@ for (var i = 0; i < fruits.length; i++) {
     }
 }
 
+// Chapter # 21 to 25
+// Q # 1
+var fName = prompt("Enter you First Name")
+    var lName = prompt("Enter your Last Name")
+
+    var fullName = fName + lName;
+
+    var greet = alert("Welcome " + fullName)
+
+// Q # 2
+var phone = prompt("What is your favorite mobile phone model")
+    var model = ['Samsung Galaxy S6 Edge Plus', 'Huawei', 'Nokia' , 'IPhone 11']
+   
+        if(model != phone ){
+        alert("Phone not found")
+    }
+    document.write("My favorite phone is: " +phone + "<br>")
+    document.write("Length of String: " +phone.length)
+// Q # 3
+var word = 'Pakistani';
+    
+    document.write("<b>String: " +word +"<b>"+ "<br>"  )
+    document.write("Index of 'n': " +word.indexOf("n"))
+
+// Q # 4
+var word = 'Hello World';
+    
+document.write("<b>String: " +word +"<b>"+ "<br>"  )
+document.write("Last Index of 'l': " +word.lastIndexOf("l"))
+
+// Q # 5
+var word = 'Pakistani';
+    
+document.write("<b>String: " +word +"<b>"+ "<br>"  )
+document.write("Character at Index 3: " +word.charAt(3))
+
+// Q # 6
+    var fName = prompt("Enter you First Name")
+    var lName = prompt("Enter your Last Name")
+
+
+    var greet = alert("Welcome " + fName.concat(lName))
+
+// Q # 7
+var city = "Hyderabad";
+
+    document.write("<b>"+ "City: " +city + "<br>")
+    document.write("<b>" + "after replacement: " + city.replace("Hyderabad","Islamabad")) 
+
+// Q # 8
+var message = "Ali and Sami are best friends. They play cricket and football together.";
+
+    document.write("<b>"+ "message: " +message + "<br>")
+    document.write("<b>" + "after replacement: " + message.replace(/and/g,"&"))    
+    
+// Q # 10
+var input = prompt("Enter the String value")
+
+   document.write("<b>"+ "User input: " +input + "<br>")
+   document.write("Upper Case: " +input.toUpperCase())  
+
+// Q # 11
+var input = prompt("Enter the String value")
+
+   document.write("<b>"+ "User input: " +input + "<br>")
+   document.write("Lower Case: " +input.toLowerCase())  
+ 
+// Q # 12
+
+var num = 35.36;
+
+document.write("<b>"+ "Number: " +num + "<br>")
+document.write("Result: " + parseInt(num.toString().replace('.','')))   
+
+// Q # 16
+var university = "University of Karachi";
+   for(var i=0; i < university.length; i++){
+
+    document.write(university.charAt(i).split("") + "<br>");
+   } 
+
+// Q # 17
+var country = prompt("Enter Country Name");
+
+document.write("<b>" + "User input: " +country + "<br>")
+document.write("Last Character of input: " +country.charAt(7));
+
+// Q # 18
+   var string = "the quick brown fox jumps over the lazy dog";
+
+   document.write("<b>"+ "Text: The quick brown fox jumps over the lazy dog" + "<br>")  
+   document.write("There are " +string.match(/the/g).length + " occurrence(s) in the word 'the'");
+
+
+// Chapter # 26 to 30
+// Q # 1
+var number = prompt("Enter an integer number");
+var floor = Math.floor(number);
+var ceil = Math.ceil(number);
+
+document.write("<b>" + " number : " +number + "<br>" + "round off value : " +floor + "<br>");
+document.write("floor value: " +floor + "<br>")
+document.write("ceil value: " +ceil) 
+
+// Q # 2
+var number = prompt("Enter a negative floating number");
+   var floor = Math.floor(number);
+   var ceil = Math.ceil(number);
+
+   document.write("<b>" + " number : " +number + "<br>" + "round off value : " +floor + "<br>");
+   document.write("floor value: " +floor + "<br>")
+   document.write("ceil value: " +ceil)
+
+// Q # 3
+var number = prompt("Enter a number");
+   var absolute = Math.abs(number);
+
+   document.write("<b>" + "The absolute value of " +number + " is " +absolute);
+
+// Q # 4
+var dice = Math.floor(Math.random() * 10);
+   var dice2 = Math.floor(Math.random() * 10);
+
+   document.write("<b>" + "random dice value: " +dice + "<br>");
+   document.write("<b>" + "random dice value: " +dice2);
+   
+// Q # 6
+var number = Math.floor(Math.random() * 100);
+
+   document.write("<b>" + "random number between 1 and 100: " +number);   
+
+// Q # 7
+var weight = prompt("Enter your weight in kg")
+
+   document.write("<b>"+ "The weight of user is " +weight + " Kilograms")
+   
+// Q # 8
+var secretNum = Math.floor(Math.random() * 10);
+   var user = prompt("Enter a number between 1 to 10")
+
+   if(secretNum == user){
+       alert("Congratulations xD")
+   }else{
+       alert("Try Again!")
+   }
+   
+// Chapter # 31 to 34
+// Q # 1
+var currentDate = new Date()
+
+document.write(currentDate)
+
+// Q # 2
+var date = new Date();
+   var currentMonth = date.getMonth(5);
+  
+   document.write("Current month: " +currentMonth);
+
+// Q # 3
+var dayName = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];   
+   var date = new Date();
+   var currentDay = date.getDay();
+   var nameOfToday = dayName[currentDay];
+  
+   document.write("<b>" + "Today is " +nameOfToday);   
+
+// Q # 4
+var dayName = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];   
+   var date = new Date();
+   var currentDay = date.getDay();
+   var nameOfToday = dayName[currentDay];
+  
+   if(nameOfToday == "Sat" || nameOfToday == "Sun"){
+
+    document.write("<b>" + "It's Fun day");
+   }
+    else{
+        document.write("<b>" +"It's not Fun day");
+    }
+    
+// Q # 5
+var date = new Date();
+   var currentDate = date.getDate();
+  
+   if(currentDate < 16 ){
+
+    document.write("<b>" + "First fifteen day of the month");
+   }
+    else{
+        document.write("<b>" +"Last days of the month");
+    }
+
+// Chapter # 35 to 38     
+// Q # 1
+function currentDateAndTime(){
+    var date = new Date();
+    document.write(date);
+    
+    }
+    currentDateAndTime();
+
+// Q # 2
+ function greetUser(fName, lName){
+     
+  alert(fName,lName);
+  
+  }
+  greetUser("Welcome to Umair Shah");
+  
+// Q # 3
+function add(){
+    var a = prompt("Enter first number");
+    var b = prompt("Enter Second number");
+    var c = a - b; 
+ 
+   alert(c);
+   return false;
+   
+   }
+   add();
+
+// Q # 4
+function calculator(operand,operator,operand2){
+    if(operator == '+'){
+      return operand + operand2;
+    }
+      else if(operator == '-'){
+      return operand - operand2;
+    }
+    else if(operator == '*'){
+     return operand * operand2;
+    }
+    else if(operator == '/'){
+      return operand / operand2;
+    }
+    else{
+      return "InCorrect Opeartor!";
+    }
+  }
+  var result = calculator(5,"-",5);
+  var result2 = calculator(3,"*",2);
+  var result3 = calculator(6,"/",2);
+  var result4 = calculator(2,"$",3);
+
+  document.write(result + "<br>");
+  document.write(result2 + "<br>");
+  document.write(result3 + "<br>");
+  document.write(result4 + "<br>");
+  
+// Q # 5
+function square(){
+    var num = prompt("Enter a number");
+    var result = num * num;
+     
+
+     alert(result);
+  }
+  square();
+  
+// Q # 6
+function fact(num){
+    if(num == 1){
+      return 1;
+    }
+      return num * fact(num - 1);
+     
+  }
+    document.write(fact(5));
+    
+// Q # 7
+function count(){
+    var first = prompt("Enter first number")
+    var last = prompt("Enter last number")
+
+    for(var i = first; i <= last; i++){
+      document.write(i + "</br>")
+    }
+  }
+      count();
+
+// Q # 8
+function hypotenuse(){
+    var base = prompt("Enter base of right angle triangle")
+    var perpendicular = prompt("Enter perpendicular of right angle triangle")
+
+    function square(x){
+      return x * x;
+    }
+    return Math.sqrt(base + perpendicular);
+  }
+ 
+    function secondFunction(){
+      var result;
+      result = hypotenuse();
+      document.write(result);
+
+    }
+    secondFunction();
+    
+// Q # 9
+function areaOfRectangle(width,height){
+    var area = width * height;
+    document.write("Area of Triangle is " +area)
+  }
+  areaOfRectangle(2.1,7.3);
+  
+// Q # 10
+function palindrome(){
+    var palin = prompt("Enter a word")
+    if(palin.split('').reverse().join('')){
+      alert("The word is Palindrome")
+    }
+    else{
+      alert("Word is not Palindrome");
+    }
+
+  }
+  palindrome();
+  
+// Q # 13
+function calcCircumference(radius){
+    var circum_of_circle = 2 * 3.142 * radius;
+    
+    document.write("The Circumference is " +circum_of_circle)
+
+    function calcArea(radius){
+     var area = 3.142 * radius * radius;
+     document.write("The area is " +area)
+    }
+
+  }
+  calcCircumference(2);
+    
+
+
+
+
+     
+ 
+ 
+
+
+
+
 
 
 

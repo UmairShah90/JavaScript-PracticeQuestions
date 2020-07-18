@@ -900,7 +900,310 @@ function calcCircumference(radius){
 
   }
   calcCircumference(2);
+
+
+// chap 39 to 44  
+// Q # 2
+<h1>Leap Year</h1>
+
+//   <input type="text" name="" id="year">
+
+//  <input type="button" id="btn" value="Check Leap Year" onclick="isLeapYear()">
+
+//  <p id="leapYear"></p>
+
+         function isLeapYear() {
+            var year = document.getElementById("year").value;
+
+            document.getElementById("leapYear").innerHTML 
+
+           = (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0); 
+
+// Q # 3
+
+function areaOfTriangle(a,b,c){
+    var s = (a+b+c)/2;
+    var area = Math.sqrt( s * (s - a) * (s - b) * (s - c));
+    var result = area;
+
+      document.write(" <b> The Area is " +result)
+  }
+  areaOfTriangle(2,2,2)
+
+// Q # 5
+
+/* <input type="button" onclick="myFunction()" value="Try it">
+
+<p id="demo"></p> */
+
+function myFunction(){
+          var str = "Welcome to the universe";
+          var a = str.indexOf("e",2);
+
+          document.getElementById("demo").innerHTML = a;
+
+          
+      }
+// Q # 6
+function removeVowels(str) {
+    return str.replace(/[aeiou]/gi, '');
+  }
+  document.write(removeVowels("my name is khan and i m not a terrorist"))
+         }
+
+// Q # 7
+function vowelCount(str){
+    var vowellist = 'aeiouAEIOU';
+    var vcount = 0;
+
+    for(var x = 0; x < str.length; x++){
+        if(vowellist.indexOf(str[x]) !== -1){
+            vcount += 1;
+        }
+    }
+    return vcount;
+}
+document.write(vowelCount("My name is Umair"));
+
+// Q # 8
+function meterDistance(){
+    var km = +prompt("Enter distance of cities in Kilometers");
+
+    var meter = km * 1000;
+    var result = meter;
+   
+    document.write("Distance in meter is : " +result);
+}
+cities();
+
+function feetDistance(){
+    var km = +prompt("Enter distance of cities in Kilometers");
+
+    var feet = km * 3280.84;
+    var result = feet;
+  
+   
+   
+    document.write("Distance in meter is : " +result);
+}
+feetDistance();
+
+function feetDistance(){
+    var km = +prompt("Enter distance of cities in Kilometers");
+
+    var feet = km * 3280.84;
+    var result = feet;
+  
+    // var inch = km * 39370.08;
+    // var centimeter = km * 100;
+   
+    document.write("Distance in meter is : " +result);
+}
+feetDistance();
+
+function inchDistance(){
+    var km = +prompt("Enter distance of cities in Kilometers");
+
+    var inch = km * 39370.08;
+    var result = inch;
+  
+  
+    // var centimeter = km * 100;
+   
+    document.write("Distance in meter is : " +result);
+}
+inchDistance();
+
+function centiMeterDistance(){
+    var km = +prompt("Enter distance of cities in Kilometers");
+
+    var centimeter = km * 100;
+    var result = centimeter;
+  
+  
+  
+   
+    document.write("Distance in meter is : " +result);
+}
+centiMeterDistance();
+
+
+
+// Q # 10
+function currencyDenomination(){
+    var cash = prompt("Enter Cash (in Hundreds): ");
+    var hundred = cash / 100;
+    var fifty = cash / 50;
+    var ten = cash / 10;
+
+    document.write("you will have " +hundred + " hundred notes " +fifty + " fifty notes " +ten + " ten notes")
+}
+currencyDenomination();
+
+// chap # 43 - 48
+// Q # 1
+<a href="#" onclick="alert('Hello World')" >Link</a>
     
+// Q # 2
+
+{/* <div>
+        <h1>Mobile Phone lookup</h1>
+        <a href="#"><img onclick="alert('Thanks for purchasing a moble phone')" src="https://static.toiimg.com/photo/73078527.cms" alt="Iphone" width="100px" ></a>
+
+        <a href="#"><img onclick="alert('Thanks for purchasing a moble phone')" src="https://static.toiimg.com/photo/73078527.cms" alt="Iphone" width="100px"></a>
+
+       <a href="#"> <img onclick="alert('Thanks for purchasing a moble phone')" src="https://static.toiimg.com/photo/73078527.cms" alt="Huawei" width="100px"></a>
+
+        <a href="#"><img onclick="alert('Thanks for purchasing a moble phone')" src="https://static.toiimg.com/photo/73078527.cms" alt="Motorola" width="100px"></a>
+    </div> */}
+
+
+// Q # 3
+<div>
+       <table id="table" style="border: 1px solid black;">
+           <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Class</th>
+           </tr>
+        <td>0</td>
+        <td>Jhone</td>
+        <td>10</td>
+        <td>
+            <button onclick="deleteRow(this)">Delete</button>
+        </td>
+        <tr>
+            <td>1</td>
+            <td>Doe</td>
+        <td>9</td>
+        <td>
+            <button onclick="deleteRow(this)">Delete</button>
+        </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mark</td>
+        <td>10</td>
+        <td>
+            <button onclick="deleteRow(this)">Delete</button>
+        </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>James</td>
+        <td>8</td>
+        <td>
+            <button onclick="deleteRow(this)">Delete</button>
+        </td>
+        </tr>
+
+           
+       </table>
+   </div>
+
+        function deleteRow(r){
+         var i = r.parentNode.parentNode.rowIndex;
+         document.getElementById('table').deleteRow(i);
+        }
+   
+// Q # 4
+
+<img  width="500" onmouseover="src='https://i.ytimg.com/vi/dsWxMoh3_50/maxresdefault.jpg'"
+src="https://www.extremetech.com/wp-content/uploads/2019/12/SONATA-hero-option1-764A5360-edit.jpg"
+onmouseout="src='https://www.extremetech.com/wp-content/uploads/2019/12/SONATA-hero-option1-764A5360-edit.jpg'"
+alt="Car">
+
+</img>    
+
+// chap 49 to 52
+// Q # 1
+
+{/* <div>
+        
+<form class="modal-content" action="/action_page.php">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="submit" class="signup">Sign Up</button>
+    </div>
+  </div>
+</form>
+</div> */}
+
+
+// chap # 58 to 67
+// Q # 1
+// (i)
+var main = document.getElementById("main-content");
+
+// (ii)
+var main = document.getElementById("main-content").children;
+console.log(main);
+
+// (iii)
+var render = document.getElementById("main-content").childNodes[1].length;
+
+    document.getElementById("render").innerHTML = render;
+// (iv)
+document.getElementById("first-name").value = "Umair";
+
+// (v)
+document.getElementById("last-name").value = "Zafar";
+
+// Q # 2
+// (i)
+var a = document.getElementById("form-content").nodeType;
+  console.log(a)
+
+// (ii)
+var a = document.getElementById("last-name").nodeType;
+  console.log(a)
+
+  var a = document.getElementById("last-name").childNodes;
+  console.log(a)  
+
+// (iv)
+var a = document.getElementById("main-content").firstChild;
+  console.log(a)  
+
+  var a = document.getElementById("main-content").lastChild;
+  console.log(a)  
+  
+// (v)
+var main = document.getElementById("last-name").nextSibling;
+console.log(main);
+
+var main = document.getElementById("last-name").previousSibling;
+console.log(main);
+
+// (vi)
+var main = document.getElementById("email").parentNode;
+console.log(main);
+
+var main = document.getElementById("email").nodeType;
+console.log(main);
+  
+
+
+
+
 
 
 
